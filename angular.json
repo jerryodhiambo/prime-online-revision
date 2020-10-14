@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "prime-online-revision"
+    }
+  },
+  "defaultProject": "prime-online-revision",
+  "cli": {
+    "analytics": "ccd0e3d5-646f-4ad7-a3a9-71a956f325fe"
+  }
 }
