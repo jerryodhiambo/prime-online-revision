@@ -1,0 +1,195 @@
+.statisitics-section {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100vh;
+}
+.uk-card {
+  min-height: 100vh !important;
+}
+
+.grey {
+  background-color: #f1f1f1;
+}
+
+.white {
+  /* background-color: lime; */
+  border-radius: 60px 0px 0px 60px;
+}
+
+.red {
+  background-color: red;
+}
+
+.black {
+  /* background-color: black; */
+  background-color: #212121;
+}
+
+.black > h3 {
+  color: white !important;
+}
+
+.chart {
+  min-height: 30vh !important;
+}
+
+hr {
+  width: 100% !important;
+  margin-top: 13px;
+}
+
+.number-of-items {
+  color: white !important;
+}
+
+.yellow {
+  background-color: #fde564 !important;
+}
+
+.uk-search {
+  width: 100% !important;
+  text-align: end;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.example::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.example {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.rounded-cards {
+  border-radius: 30px;
+}
+
+.finance-header {
+  top: 70px;
+  font: normal normal 300 62px/83px Segoe UI;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+  margin-left: 5vw;
+}
+
+.span-finance {
+  color: #ff0000;
+  margin-left: 5vw;
+}
+
+.earnings-title {
+  top: 247px;
+
+  height: 28px;
+  margin-left: 5vw;
+
+  font: normal normal bold 21px/28px Segoe UI;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 0.5;
+}
+.earnings-amount {
+  top: 312px;
+  left: 1668px;
+  width: 277px;
+  height: 58px;
+  text-align: left;
+  font: normal normal bold 44px/58px Segoe UI;
+  letter-spacing: 0px;
+  color: #ff0000;
+  opacity: 1;
+  margin-left: 10vw;
+}
+
+.earnings-amount2 {
+  top: 312px;
+  left: 1668px;
+  width: 277px;
+  height: 58px;
+  text-align: left;
+  font: normal normal bold 44px/58px Segoe UI;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+  margin-left: 10vw;
+}
+
+.span-title {
+  color: #fde564;
+  align-content: center;
+  margin-left: 0.5vw;
+  /* margin-block-end: 2vw; */
+}
+.graph-finance {
+  margin-left: 5vw;
+}
+.grey-card {
+  color: #f1f1f1;
+}
+.rounded-finance {
+  border-radius: 60px 0px 0px 60px;
+}
+.card-title-header {
+  text-align: left;
+  font: normal normal bold 21px/28px Segoe UI;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+.card-title-body {
+  text-align: center;
+  margin-top: -2vh;
+  font: normal normal 300 44px/58px Segoe UI;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+.view-all {
+  width: 75px;
+  height: 75px;
+  margin-top: 20px;
+  text-align: center;
+  font: normal normal bold 15px/20px Segoe UI;
+  letter-spacing: 0px;
+  color: #ff0000;
+  opacity: 1;
+}
+.view-all-text {
+  font-size: 2vh;
+}
+
+.footer-button {
+  width: 75px;
+  height: 75px;
+  background-color: #ff0000;
+  border-radius: 20px;
+  display: inline-block;
+  color: white;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+  opacity: 1;
+}
+
+.footer-button::before {
+  content: '+';
+}
+.review-button {
+  width: 227px;
+  height: 75px;
+  background-color: #000000;
+  border-radius: 20px;
+  opacity: 1;
+}
+.review-text {
+  width: 150px;
+  height: 28px;
+  text-align: right;
+  font: normal normal normal 15px/20px Segoe UI;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+}

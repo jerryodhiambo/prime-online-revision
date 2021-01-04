@@ -1,0 +1,99 @@
+<div>
+    <div class="uk-visible@m sidebar">
+        <div class="uk-margin-large-bottom">
+            <!-- <img src="assets/images/logo_light.png" alt=""> -->
+            <h3 style="color: white;">PRIME ONLINE REVISION</h3>
+            <!-- <p style="color: #ffffff;"><b>Jerry Odhiambo</b></p> -->
+        </div>
+
+        <!-- Menu Items -->
+        <div class="uk-width-1-1">
+            <ul class="uk-nav-primary uk-nav-parent-icon" uk-nav>
+                <!-- Dashboard -->
+                <li class="uk-width-1-1@l">
+                    <a [routerLink]="['/backoffice']" routerLinkActive="router-link-active" class="blacked">
+                        <span>
+                            <fa-icon [icon]="dashboardIcon"></fa-icon>
+                        </span> Dashboard</a>
+                </li>
+
+                <!-- Vendors -->
+                <li class="uk-parent">
+                    <a href="reports" class="blacked"><span>
+                            <fa-icon [icon]="vendorIcon"></fa-icon>
+                        </span> Exams</a>
+                    <ul class="uk-nav-sub">
+                        <li><a class="blacked" [routerLink]="['/backoffice/vendors/create-vendor']"
+                                routerLinkActive="router-link-active"><span uk-icon="icon: plus-circle"></span> New
+                                Exam Paper</a></li>
+                        <li><a class="blacked" [routerLink]="['/backoffice/vendors/vendors-list']"
+                                routerLinkActive="router-link-active"><span uk-icon="icon:table"></span> All Revision
+                                Materials</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Riders -->
+                <!-- <li class="uk-parent">
+                    <a href="payments" class="blacked"><span>
+                            <fa-icon [icon]="riderIcon"></fa-icon>
+                        </span> Riders</a>
+                    <ul class="uk-nav-sub">
+                        <li><a class="blacked" href="#" [routerLink]="['/backoffice/riders/create-rider']"
+                                routerLinkActive="router-link-active"><span uk-icon="icon: plus-circle"></span> New
+                                Rider</a></li>
+                        <li><a class="blacked" href="#" [routerLink]="['/backoffice/riders/rider-reports']"
+                                routerLinkActive="router-link-active"><span>
+                                    <fa-icon [icon]="reportsIcon"></fa-icon>
+                                </span> Reports</a></li>
+                        <li><a class="blacked" href="#" [routerLink]="['/backoffice/riders/riders-list']"
+                                routerLinkActive="router-link-active"><span uk-icon="icon: table"></span> All Riders</a>
+                        </li>
+                    </ul>
+                </li> -->
+                <!-- Orders -->
+                <li class="uk-parent">
+                    <a href="orders" class="blacked"><span>
+                            <fa-icon [icon]="ordersIcon"></fa-icon>
+                        </span>
+                        Orders
+                    </a>
+                    <ul class="uk-nav-sub">
+                        <li><a class="blacked" href="#" [routerLink]="['/backoffice/orders/order-reports']"
+                                routerLinkActive="router-link-active"><span>
+                                    <fa-icon [icon]="reportsIcon"></fa-icon>
+                                </span> Reports</a></li>
+                        <li><a class="blacked" href="#" [routerLink]="['/backoffice/orders/orders-list']"
+                                routerLinkActive="router-link-active"><span uk-icon="icon: table"></span>
+                                All Orders</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <a href="#" class="uk-navbar-toggle uk-hidden@m sidebar" uk-navbar-toggle-icon
+        uk-toggle="target: #offcanvas-nav"></a>
+
+</div>
+
+
+
+<div class="uk-hidden@m sidebar">
+
+    <div id="offcanvas-nav" uk-offcanvas="mode:push; overlay: true">
+        <div class="uk-offcanvas-bar">
+
+            <img src="assets/iimg.png" />
+
+            <ul class="uk-nav uk-nav-default sidebar-small">
+                <li class="uk-active uk-width-1-1@l"><a href="home"><span uk-icon="home"></span> Home</a></li>
+                <li class="uk-active uk-width-1-1@l"><a href="stock"><span uk-icon="cart"></span> Stock</a></li>
+                <li class="uk-active uk-width-1-1@l"><a href="statistics"><span uk-icon="pencil"></span> Statistics</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+
+</div>

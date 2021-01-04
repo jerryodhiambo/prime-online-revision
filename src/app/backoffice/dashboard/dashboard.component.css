@@ -1,0 +1,23 @@
+.success {
+  color: #1fff0e;
+}
+
+.danger {
+  color: red;
+}
+
+.red-bg {
+  background-color: #ba0002;
+}
+
+.gainsboro {
+  background-color: #e0e3da;
+}
+
+.aquamarine {
+  background-color: #71b0b6;
+}
+
+.black-bg {
+  background-color: #0d2231;
+}

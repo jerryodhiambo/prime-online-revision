@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "prime-online-revision": {
+      "hosting": {
+        "tienda-vendors": [
+          "prime-online-revision"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "prime-online-revision-4ed38"
+  }
+}

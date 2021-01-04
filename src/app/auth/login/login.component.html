@@ -1,0 +1,30 @@
+<div style="height: 90vh;" class="uk-flex uk-flex-center uk-flex-middle">
+    <div class="uk-card uk-card-default uk-width-1-4@m uk-width-1-1@s uk-margin-small-left uk-margin-small-right">
+        <div class="uk-card-header uk-text-center">
+            <!-- <img src="assets/images/logo_dark.png" alt=""> -->
+            <p><b>Welcome to Prime Online Revision</b></p>
+        </div>
+        <div class="uk-card-body">
+            <form class="uk-form-stacked" #loginForm="ngForm" (submit)="loginForm.form.valid && login()">
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="form-stacked-text">Email Address</label>
+                    <div class="uk-form-controls">
+                        <input class="uk-input" name="email" id="form-stacked-text" type="email" [(ngModel)]="email"
+                            placeholder="Email">
+                    </div>
+                </div>
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="form-stacked-text">Password</label>
+                    <div class="uk-form-controls">
+                        <input class="uk-input" name="password" id="form-stacked-text" type="password"
+                            [(ngModel)]="password" placeholder="****">
+                    </div>
+                </div>
+                <div class="uk-text-center uk-margin-small-top">
+                    <button class="uk-button btn-danger uk-width-1-1" type="submit"><span style="color: white;">
+                            LOGIN</span> <span *ngIf="loading" uk-spinner></span></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,98 @@
+<div class="uk-card uk-card-body">
+    <!-- Breadcrumb -->
+    <div>
+        <ul class="uk-breadcrumb">
+            <li><a href="#"><span uk-icon="icon: settings"></span> Exams</a></li>
+            <li><a [routerLink]="['/backoffice/vendors/vendors-list']" routerLinkActive="router-link-active">List of
+                    Exam Papers</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="uk-grid-small uk-child-width-expand@s" uk-grid>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">
+                <div class="uk-flex uk-flex-between uk-flex-wrap-between">
+                    <div>
+                        <h4 class="uk-card-title">All Exam Papers</h4>
+                    </div>
+                </div>
+                <div class="">
+                    <!-- Table -->
+                    <table class="uk-table uk-table-striped">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Paper Name</th>
+                                <th>Document Type</th>
+                                <th>Category</th>
+                                <th>Subject</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr
+                                *ngFor="let exam of exams| async | paginate: {id: 'vendors', itemsPerPage: params.limit, currentPage: p, totalItems: totalVendors }; let i = index">
+                                <td>1</td>
+                                <td>{{exam?.name}}</td>
+                                <td>{{exam?.document_type | titlecase}}</td>
+                                <td>{{exam?.category | titlecase}}</td>
+                                <td>{{exam?.subject}}</td>
+                                <td>KES {{exam?.price}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <hr>
+                    <!-- Pagination -->
+                    <div class="uk-text-left">
+                        <pagination-controls id="vendors" previousLabel="Prev" nextLabel="Next"
+                            (pageChange)="getVendorsPagination($event)">
+                        </pagination-controls>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+</div>
+
+
+
+
+
+<!-- Update Business requirement -->
+<div id="update-vendor" uk-modal>
+    <div class="uk-modal-dialog uk-margin-auto-vertical uk-modal-body">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <div class="uk-modal-header">
+            <h4 class="">Update Business Requirement</h4>
+        </div>
+        <div class="uk-modal-body">
+            <form class="uk-form-stacked" #updateForm="ngForm" (submit)="updateForm.form.valid && updateVendor()">
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="form-stacked-text">Name</label>
+                    <div class="uk-form-controls">
+                        <input class="uk-input" name="name" id="form-stacked-text" type="text"
+                            placeholder="Food & Beverages">
+                    </div>
+                </div>
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="form-stacked-text">Description</label>
+                    <div class="uk-form-controls">
+                        <input class="uk-textarea" name="description" id="form-stacked-text" rows="5" type="text"
+                            placeholder="Foodstuffs">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="uk-modal-footer uk-text-right uk-flex uk-flex-between">
+            <div>
+                <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+            </div>
+            <div>
+                <button class="uk-button uk-button-primary" type="button">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>

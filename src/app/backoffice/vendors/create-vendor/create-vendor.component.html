@@ -1,0 +1,160 @@
+<div class="uk-card uk-card-body">
+    <!-- Breadcrumb -->
+    <div>
+        <ul class="uk-breadcrumb">
+            <li><a href="#"><span uk-icon="icon: settings"></span> Exams</a></li>
+            <li><a [routerLink]="['/backoffice/vendors/create-vendor']" routerLinkActive="router-link-active">Create
+                    Exam Materials</a></li>
+        </ul>
+    </div>
+
+    <div class="uk-grid-small uk-child-width-expand@s" uk-grid>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">
+                <div class="uk-flex uk-flex-between uk-flex-wrap-between">
+                    <div>
+                        <h4 class="uk-card-title">Create Exam Material</h4>
+                    </div>
+                </div>
+                <div>
+                    <aw-wizard>
+                        <!-- Vendor KYC -->
+                        <aw-wizard-step stepTitle="ADD EXAM PAPER">
+                            <form>
+                                <div class="uk-grid-small" uk-grid>
+                                    <div class="uk-width-1-1">
+                                        <div class="uk-margin">
+                                            <label class="uk-form-label" for="form-stacked-select">Document Type</label>
+                                            <div class="uk-form-controls">
+                                                <select class="uk-select" id="form-stacked-select" name="document_type"
+                                                    [(ngModel)]="exam.document_type">
+                                                    <option value="Secondary Exams">Secondary Exams</option>
+                                                    <option value="Primary Exams">Primary Exams</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="uk-width-1-1">
+                                        <div class="uk-margin" *ngIf="exam.document_type === 'Secondary Exams'">
+                                            <label class="uk-form-label" for="form-stacked-select">Category</label>
+                                            <div class="uk-form-controls">
+                                                <select class="uk-select" id="form-stacked-select" name="category"
+                                                    [(ngModel)]="exam.category">
+                                                    <option value="Form 1">Form 1</option>
+                                                    <option value="Form 2">Form 2</option>
+                                                    <option value="Form 3">Form 3</option>
+                                                    <option value="Form 4">Form 4</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="uk-margin" *ngIf="exam.document_type === 'Primary Exams'">
+                                            <label class="uk-form-label" for="form-stacked-select">Category</label>
+                                            <div class="uk-form-controls">
+                                                <select class="uk-select" id="form-stacked-select" name="category"
+                                                    [(ngModel)]="exam.category">
+                                                    <option value="PP1">PP1</option>
+                                                    <option value="PP2">PP2</option>
+                                                    <option value="Grade 1">Grade 1</option>
+                                                    <option value="Grade 2">Grade 2</option>
+                                                    <option value="Grade 3">Grade 3</option>
+                                                    <option value="Grade 4">Grade 4</option>
+                                                    <option value="Standard 5">Standard 5</option>
+                                                    <option value="Standard 6">Standard 6</option>
+                                                    <option value="Standard 7">Standard 7</option>
+                                                    <option value="Standard 8">Standard 8</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="uk-width-1-1">
+                                        <div class="uk-margin" *ngIf="exam.document_type === 'Primary Exams'">
+                                            <label class="uk-form-label" for="form-stacked-select">Category</label>
+                                            <div class="uk-form-controls">
+                                                <select class="uk-select" id="form-stacked-select" name="subject"
+                                                    [(ngModel)]="exam.subject">
+                                                    <option value="English">English</option>
+                                                    <option value="Kiswahili">Kiswahili</option>
+                                                    <option value="Mathematics">Mathematics</option>
+                                                    <option value="Social Studies">Social Studies</option>
+                                                    <option value="Science">Science</option>
+                                                    <option value="CRE">CRE</option>
+                                                    <option value="Mathematical Activities">Mathematical Activities
+                                                    </option>
+                                                    <option value="English Activities/Literacy Activities">English
+                                                        Activities/Literacy Activities
+                                                    </option>
+                                                    <option value="Shughuli Za Kiswahili">Shughuli za Kiswahili</option>
+                                                    <option value="Hygiene and Nutrition">Hygiene and Nutrition Act
+                                                    </option>
+                                                    <option value="Environmental Activities">Environmental Activities
+                                                    </option>
+                                                    <option value="Religious Activities">Religious Activities</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="uk-margin" *ngIf="exam.document_type === 'Secondary Exams'">
+                                            <label class="uk-form-label" for="form-stacked-select">Category</label>
+                                            <div class="uk-form-controls">
+                                                <select class="uk-select" id="form-stacked-select" name="subject"
+                                                    [(ngModel)]="exam.subject">
+                                                    <option value="English">English</option>
+                                                    <option value="Kiswahili">Kiswahili</option>
+                                                    <option value="Mathematics">Mathematics</option>
+                                                    <option value="Chemistry">Chemistry</option>
+                                                    <option value="Physics">Physics</option>
+                                                    <option value="Biology">Biology</option>
+                                                    <option value="Agriculture">Agriculture</option>
+                                                    <option value="Computer Studies">Computer Studies</option>
+                                                    <option value="Business Studies">Business Studies</option>
+                                                    <option value="CRE">CRE</option>
+                                                    <option value="Geography">Geography</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-1@s">
+                                        <div class="uk-margin">
+                                            <label class="uk-form-label" for="form-stacked-text">Name of Paper</label>
+                                            <div class="uk-form-controls">
+                                                <input class="uk-input" name="name" id="form-stacked-text" type="text"
+                                                    placeholder="" [(ngModel)]="exam.name">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-1@s">
+                                        <div class="uk-margin">
+                                            <label class="uk-form-label" for="form-stacked-text">Price</label>
+                                            <div class="uk-form-controls">
+                                                <input class="uk-input" name="name" id="form-stacked-text" type="number"
+                                                    placeholder="" [(ngModel)]="exam.price">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-1@s">
+                                        <div class="uk-margin">
+                                            <label class="uk-form-label" for="form-stacked-text">Link</label>
+                                            <div class="uk-form-controls">
+                                                <input class="uk-input" name="link" id="form-stacked-text" type="text"
+                                                    placeholder="" [(ngModel)]="exam.link">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="uk-flex uk-flex-right uk-margin-medium-top">
+                                    <button class="uk-button uk-button-primary" type="button"
+                                        (click)="submit()">SUBMIT</button>
+                                </div>
+                            </form>
+                        </aw-wizard-step>
+
+                    </aw-wizard>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+</div>

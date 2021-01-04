@@ -1,0 +1,145 @@
+<div class="uk-card uk-card-body">
+    <!-- Breadcrumb -->
+    <div>
+        <ul class="uk-breadcrumb">
+            <li><a href="#"><span uk-icon="icon: settings"></span> Orders</a></li>
+            <li><a [routerLink]="['/backoffice/vendors/vendors-list']" routerLinkActive="router-link-active">List of
+                    Orders</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="uk-grid-small uk-child-width-expand@s" uk-grid>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">
+                <div class="uk-flex uk-flex-between uk-flex-wrap-between">
+                    <div>
+                        <h4 class="uk-card-title">Orders</h4>
+                    </div>
+                </div>
+                <div class="">
+                    <div>
+                        <ul class="uk-tab uk-child-width-expand" uk-tab data-uk-tab="{connect:'#my-id'}">
+                            <li><a href="">All Orders</a></li>
+                            <!-- <li><a href="">Completed Orders</a></li>
+                            <li><a href="">Pending Riders</a></li> -->
+                        </ul>
+                        <ul id="my-id" class="uk-switcher uk-margin">
+                            <!-- All Orders -->
+                            <li><a href="#" id="autoplayer" data-uk-switcher-item="next"></a>
+                                <!-- Search and filters -->
+                                <div class="uk-margin-medium-top uk-margin-medium-bottom">
+                                    <div class="uk-grid-small uk-child-width-expand@s" uk-grid>
+                                        <div>
+                                            <div class="uk-margin">
+                                                <div class="uk-inline">
+                                                    <span class="uk-form-icon" uk-icon="icon: search"></span>
+                                                    <input class="uk-input" type="text"
+                                                        (keyup)="search($event.target.value)"
+                                                        placeholder="Search phone number">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Filter by gender -->
+                                        <div>
+                                            <div class="uk-margin">
+                                                <div uk-form-custom="target: > * > span:first-child">
+                                                    <span class="uk-form-icon uk-margin-medium-right"
+                                                        uk-icon="icon: user"></span>
+                                                    <select (input)="filterByStatus($event.target.value)">
+                                                        <option value=""><span class="uk-text-mute">Filter By
+                                                                Delivery Status</span></option>
+                                                        <option value="true">Delivered</option>
+                                                        <option value="false">Pending Delivery</option>
+                                                    </select>
+                                                    <button class="uk-button uk-button-default" type="button"
+                                                        tabindex="-1">
+                                                        <span></span>
+                                                        <span uk-icon="icon: chevron-down"></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- <div>
+
+                                            <div class="uk-flex uk-flex-right">
+                                                <button class="uk-button uk-button-default">Download <span
+                                                        uk-icon="icon: download"></span></button>
+                                            </div>
+                                        </div> -->
+
+                                    </div>
+                                </div>
+                                <hr>
+                                <!-- Table -->
+                                <div class="uk-overflow-auto">
+                                    <table class="uk-table uk-table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Date</th>
+                                                <th>Email</th>
+                                                <th>Level</th>
+                                                <th>Category</th>
+                                                <th>Exam</th>
+                                                <th>Phone Number</th>
+                                                <th>Price</th>
+                                                <th>Delivered</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let order of orders; let i = index">
+                                                <td>{{order?.created_at}}</td>
+                                                <td>{{order?.email}}</td>
+                                                <td>{{order?.document_type}}</td>
+                                                <td>{{order?.category}}</td>
+                                                <td>{{order?.name}}</td>
+                                                <td>{{order?.phoneNumber}}</td>
+                                                <td><span>KES {{order?.price}}</span></td>
+                                                <td><span *ngIf="!order?.delivered"
+                                                        class="uk-text-primary">{{order?.delivered}}</span>
+                                                    <span *ngIf="order?.delivered"
+                                                        class="uk-text-success">{{order?.delivered}}</span></td>
+                                                <td>
+                                                    <a class="uk-text-center" *ngIf="!order?.delivered"
+                                                        href="#modal-center" uk-toggle (click)="selectedOrder(i)"><span
+                                                            uk-icon=" icon:file-edit">
+                                                        </span></a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <hr>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+</div>
+
+<div id="modal-center" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+
+        <div class="uk-modal-header">
+            <h4>UPDATE ORDER STATUS</h4>
+        </div>
+        <div class="uk-modal-body">
+            <p class="uk-margin uk-text-center">Are you sure you want to update order as delivered?</p>
+        </div>
+        <div class="uk-modal-footer">
+            <div class="uk-flex uk-flex-between">
+                <button class="uk-button uk-button-default uk-modal-close">NO</button>
+                <button class="uk-button uk-button-primary uk-modal-close" (click)="updateOrder()">YES</button>
+            </div>
+        </div>
+
+
+    </div>
+</div>

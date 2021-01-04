@@ -1,0 +1,78 @@
+.sidebar {
+  padding-left: 50px;
+  position: fixed;
+  top: 10vh !important;
+  /* width: 20vw; */
+}
+
+.sidebar {
+  /* position: absolute; */
+  z-index: 5 !important;
+}
+
+.sidebar-small {
+  padding-top: 20vh;
+}
+
+.uk-offcanvas-bar {
+  background-color: grey;
+}
+
+.sidebar > .side-inner {
+  border-style: solid;
+  border-color: red;
+}
+
+img {
+  height: 9vh;
+  width: 8vw;
+  min-height: 90px;
+  min-width: 80px;
+}
+.tienda-icon {
+  top: 274px;
+  left: 126px;
+  width: 85px;
+  height: 85px;
+  background-color: #ffffff;
+  border-radius: 21px;
+  opacity: 1;
+}
+tienda-text {
+  height: 71px;
+  text-align: center;
+  letter-spacing: NaNpx;
+  opacity: 1;
+}
+.tienda-t {
+  font-size: 3em;
+  text-align: center;
+  color: #000000;
+  font: normal normal normal 29px/91px AL_Nevrada_PersonalUseOnly;
+}
+
+.tienda-name {
+  color: red;
+  /* text-align: center; */
+  font: normal normal bold 19px/26px Segoe UI;
+  letter-spacing: 0px;
+  color: #ff0000;
+  opacity: 1;
+}
+.blacked {
+  text-align: left;
+  color: #e0e3da;
+  margin-top: 20px;
+  font-size: large;
+}
+.icon-margin {
+  margin-right: 1vw;
+}
+
+/* .uk-nav-primary > li.uk-active > a {
+  color: #ffffff !important;
+} */
+
+.router-link-active {
+  color: #ffffff !important;
+}

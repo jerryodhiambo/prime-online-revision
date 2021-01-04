@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "prime-online-revision": {
+    "tienda-vendors": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/prime-online-revision",
+            "outputPath": "dist/tienda-vendors",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,9 +24,15 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/uikit/dist/css/uikit.min.css",
+              "node_modules/angular-archwizard/archwizard.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/uikit/dist/js/uikit.min.js",
+              "node_modules/uikit/dist/js/uikit-icons.min.js",
+              "node_modules/apexcharts/dist/apexcharts.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -62,18 +68,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "prime-online-revision:build"
+            "browserTarget": "tienda-vendors:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "prime-online-revision:build:production"
+              "browserTarget": "tienda-vendors:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "prime-online-revision:build"
+            "browserTarget": "tienda-vendors:build"
           }
         },
         "test": {
@@ -110,19 +116,24 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "prime-online-revision:serve"
+            "devServerTarget": "tienda-vendors:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "prime-online-revision:serve:production"
+              "devServerTarget": "tienda-vendors:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }
   },
-  "defaultProject": "prime-online-revision",
+  "defaultProject": "tienda-vendors",
   "cli": {
-    "analytics": "ccd0e3d5-646f-4ad7-a3a9-71a956f325fe"
+    "analytics": "2d87193f-cbe0-458f-a5e4-f3704db9bd9b",
+    "defaultCollection": "akita-schematics"
   }
 }

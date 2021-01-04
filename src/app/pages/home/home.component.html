@@ -1,0 +1,306 @@
+<app-sidebar></app-sidebar>
+<div class="uk-flex uk-flex-wrap grey">
+  <div
+    class="uk-width-1-7@l uk-width-1-5@m uk-width-1-1@s uk-card grey uk-visible@m"
+  ></div>
+  <div
+    class="uk-width-3-7@l uk-width-2-5@m uk-width-1-1@s uk-card uk-card-default uk-card-body uk-card-small white statisitics-section"
+  >
+    <div uk-grid>
+      <div class="uk-width-1-2"></div>
+      <div class="uk-width-1-2">
+        <form class="uk-search uk-search-default">
+          <input
+            class="uk-search-input rounded-cards grey"
+            type="search"
+            placeholder="Search Statistics"
+          />
+        </form>
+      </div>
+    </div>
+    <!-- cubed design -->
+    <div class="uk-text-center" uk-grid>
+      <div class="uk-width-1-2@l uk-width-1-1@m uk-width-1-1@s">
+        <div class="uk-card-default uk-card-body rounded-cards chart grey">
+          <div class="uk-card-header">
+            <img src="../../../assets/Group 2313.svg" alt="" />
+          </div>
+          <div class="uk-card-body">
+            <div>
+              <h6 class="uk-card-title card-title-header">Total Vendors</h6>
+              <h1 class="uk-card-title card-title-body">2,512</h1>
+            </div>
+          </div>
+
+          <div class="uk-card-footer">
+            <div class="uk-grid-divider" uk-grid>
+              <div class="view-all">
+                <span class="view-all-text">View All</span>
+              </div>
+              <div>
+                <button
+                  class="footer-button uk-button uk-button-default"
+                ></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="uk-width-1-2@l uk-width-1-1@m uk-width-1-1@s">
+        <div class="uk-card-default uk-card-body rounded-cards chart grey">
+          <div class="uk-card-header">
+            <img src="../../../assets/Group 2312.svg" alt="" />
+          </div>
+          <div class="uk-card-body">
+            <div>
+              <h6 class="uk-card-title card-title-header">Total Riders</h6>
+              <h1 class="uk-card-title card-title-body">3,221</h1>
+            </div>
+          </div>
+
+          <div class="uk-card-footer">
+            <div class="uk-grid-divider" uk-grid>
+              <div class="view-all">
+                <span class="view-all-text">View All</span>
+              </div>
+              <div>
+                <button
+                  class="footer-button uk-button uk-button-default"
+                ></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="uk-text-center" uk-grid>
+      <div class="uk-width-1-1">
+        <div class="uk-card-default uk-card-body rounded-cards chart grey">
+          <div class="uk-card-header">
+            <img src="../../../assets/Group 22.svg" alt="" />
+          </div>
+          <div class="uk-card-body">
+            <div>
+              <h6 class="uk-card-title card-title-header">Total Customer Visits</h6>
+              <h1 class="uk-card-title card-title-body">225,825</h1>
+            </div>
+            <div>
+              <button
+              class="review-button uk-button uk-button-default"
+            >
+            <span class="review-text">Review policies</span>
+          </button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="uk-width-1-2@l uk-width-1-1@m uk-width-1-1@s">
+        <div class="uk-card-default uk-card-body rounded-cards grey chart">
+          <div class="uk-card-header">
+            <h6 class="uk-card-title">Daily Total Orders</h6>
+            <h1 class="uk-card-title">900</h1>
+          </div>
+          <div class="uk-card-body">
+            <div>
+              <apx-chart
+                [series]="chartOptions.series"
+                [chart]="chartOptions.chart"
+                [xaxis]="chartOptions.xaxis"
+                [dataLabels]="chartOptions.dataLabels"
+                [grid]="chartOptions.grid"
+                [stroke]="chartOptions.stroke"
+                [title]="chartOptions.title"
+              ></apx-chart>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+    <!-- test when its all aligned -->
+    <!-- <div class="uk-text-center" uk-grid>
+      <div class="uk-width-1-1">
+        <div class="uk-card-default uk-card-body chart black rounded-cards">
+          <div class="uk-card-header">
+            <h6 class="uk-card-title">Daily Total Orders</h6>
+            <h1 class="uk-card-title">17,876</h1>
+          </div>
+          <div class="uk-card-body">
+            <div>
+              <apx-chart
+                [series]="chartOptions1.series"
+                [chart]="chartOptions1.chart"
+                [xaxis]="chartOptions1.xaxis"
+                [dataLabels]="chartOptions1.dataLabels"
+                [grid]="chartOptions1.grid"
+                [stroke]="chartOptions1.stroke"
+                [title]="chartOptions1.title"
+              ></apx-chart>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="uk-text-center" uk-grid>
+      <div class="uk-width-1-1">
+        <div
+          class="uk-card-default uk-card-body chart red"
+          style="border-radius: 30px"
+        >
+          <div class="uk-card-header">
+            <h6 class="uk-card-title">Daily Sales Graph</h6>
+            <h1 class="uk-card-title">Kes.3,872,980</h1>
+          </div>
+          <div class="uk-card-body">
+            <div>
+              <apx-chart
+                [series]="chartOptions2.series"
+                [chart]="chartOptions2.chart"
+                [xaxis]="chartOptions2.xaxis"
+                [dataLabels]="chartOptions2.dataLabels"
+                [grid]="chartOptions2.grid"
+                [stroke]="chartOptions2.stroke"
+                [title]="chartOptions2.title"
+              ></apx-chart>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="uk-text-center" uk-grid>
+      <div class="uk-width-1-1">
+        <div class="uk-card-default uk-card-body chart yellow rounded-cards">
+          <div class="uk-card-header">
+            <h6 class="uk-card-title">Daily Total Visitors</h6>
+            <h1 class="uk-card-title">8451</h1>
+          </div>
+          <div class="uk-card-body">
+            <div>
+              <apx-chart
+                [series]="chartOptions.series"
+                [chart]="chartOptions.chart"
+                [xaxis]="chartOptions.xaxis"
+                [dataLabels]="chartOptions.dataLabels"
+                [grid]="chartOptions.grid"
+                [stroke]="chartOptions.stroke"
+                [title]="chartOptions.title"
+              ></apx-chart>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="uk-text-center" uk-grid>
+      <div class="uk-width-1-1">
+        <div class="uk-card-default uk-card-body chart rounded-cards">
+          <div class="uk-card-header">
+            <h6 class="uk-card-title">Daily New Users</h6>
+            <h1 class="uk-card-title">7333</h1>
+          </div>
+          <div class="uk-card-body">
+            <div>
+              <apx-chart
+                [series]="chartOptions3.series"
+                [chart]="chartOptions3.chart"
+                [xaxis]="chartOptions3.xaxis"
+                [dataLabels]="chartOptions3.dataLabels"
+                [grid]="chartOptions3.grid"
+                [stroke]="chartOptions3.stroke"
+                [title]="chartOptions3.title"
+              ></apx-chart>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="uk-text-center" uk-grid>
+   <div class="uk-width-1-1">
+        <div class="uk-card-default uk-card-body chart grey rounded-cards">
+          <div class="uk-card-header">
+            <h6 class="uk-card-title">Daily New Users</h6>
+            <h1 class="uk-card-title">7333</h1>
+          </div>
+          <div class="uk-card-body">
+            <div>
+              <apx-chart
+                [series]="chartOptions3.series"
+                [chart]="chartOptions3.chart"
+                [xaxis]="chartOptions3.xaxis"
+                [dataLabels]="chartOptions3.dataLabels"
+                [grid]="chartOptions3.grid"
+                [stroke]="chartOptions3.stroke"
+                [title]="chartOptions3.title"
+              ></apx-chart>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    <!-- </div> -->
+  </div>
+
+  <!-- ///tes -->
+  <div
+    class="rounded-finance uk-width-3-7@l uk-width-2-5@m uk-width-1-1@s uk-card uk-card-default uk-card-body uk-card-small black"
+  >
+    <h3 class="finance-header">
+      Finance
+      <span uk-icon="cog" class="span-finance"></span>
+    </h3>
+
+    <!-- <div uk-grid>
+      <div class="uk-width-1-2">
+        <hr />
+      </div>
+     
+    </div> -->
+
+    <div uk-grid>
+      <div>
+        <span class="uk-text-top earnings-title">Total Earnings Today</span>
+        <span uk-icon="star" class="span-title"></span>
+
+        <p class="uk-article-meta earnings-amount">12,987,156/=</p>
+      </div>
+    </div>
+
+    <div uk-grid>
+      <div>
+        <span class="uk-text-top earnings-title">Total Earnings Yesterday</span>
+        <span uk-icon="star" class="span-title"></span>
+
+        <p class="uk-article-meta earnings-amount2">9,342,512/=</p>
+      </div>
+    </div>
+    <div uk-grid>
+      <div>
+        <span class="uk-text-top earnings-title">Yesterday Profit/Loss</span>
+        <span uk-icon="star" class="span-title uk-icon-github"></span>
+
+        <p class="uk-article-meta earnings-amount2">3,644,644‬/=</p>
+      </div>
+    </div>
+
+    <div uk-grid>
+      <div>
+        <span class="uk-text-top earnings-title"
+          >Comparison from Preceding Days</span
+        >
+        <span uk-icon="star" class="span-title uk-icon-github"></span>
+
+        <p class="uk-article-meta graph-finance">3,644,644‬/=</p>
+        <div style="margin-left: 5vw">
+          <apx-chart
+            [series]="chartOptions3.series"
+            [chart]="chartOptions3.chart"
+            [xaxis]="chartOptions3.xaxis"
+            [dataLabels]="chartOptions3.dataLabels"
+            [grid]="chartOptions3.grid"
+            [stroke]="chartOptions3.stroke"
+            [title]="chartOptions3.title"
+          ></apx-chart>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

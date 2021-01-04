@@ -1,0 +1,138 @@
+<div class="uk-card uk-card-body">
+    <!-- Breadcrumb -->
+    <div>
+        <ul class="uk-breadcrumb">
+            <li><a href="#"><span uk-icon="icon: settings"></span> Customers</a></li>
+            <li><a [routerLink]="['/backoffice/vendors/vendors-list']" routerLinkActive="router-link-active">List of
+                    Customers</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="uk-grid-small uk-child-width-expand@s" uk-grid>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">
+                <div class="uk-flex uk-flex-between uk-flex-wrap-between">
+                    <div>
+                        <h4 class="uk-card-title">Customers</h4>
+                    </div>
+                </div>
+                <div class="">
+                    <!-- Serach and filter -->
+                    <div class="uk-margin-medium-top uk-margin-medium-bottom">
+                        <div class="uk-grid-small uk-child-width-expand@s" uk-grid>
+                            <div>
+                                <div class="uk-margin">
+                                    <div class="uk-inline">
+                                        <span class="uk-form-icon" uk-icon="icon: search"></span>
+                                        <input class="uk-input" type="text" placeholder="Search">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Filter by gender -->
+                            <div>
+                                <div class="uk-margin">
+                                    <div uk-form-custom="target: > * > span:first-child">
+                                        <span class="uk-form-icon uk-margin-medium-right" uk-icon="icon: user"></span>
+                                        <select>
+                                            <option value=""><span class="uk-text-mute">Filter By
+                                                    Gender</span></option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                        </select>
+                                        <button class="uk-button uk-button-default" type="button" tabindex="-1">
+                                            <span></span>
+                                            <span uk-icon="icon: chevron-down"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Filter by registration date -->
+                            <div>
+                                <div class="uk-margin">
+                                    <div class="uk-inline">
+                                        <span class="uk-form-icon" uk-icon="icon: calendar"></span>
+                                        <input class="uk-input" type="text" placeholder="Filter By Reg. Date">
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <!-- Download button -->
+                                <div class="uk-flex uk-flex-right">
+                                    <button class="uk-button uk-button-default">Download <span
+                                            uk-icon="icon: download"></span></button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- Table -->
+                    <table class="uk-table uk-table-striped">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Phone Number</th>
+                                <th>Gender</th>
+                                <th>Email Address</th>
+                                <th>Registration Date</th>
+                                <td></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr
+                                *ngFor="let customer of customers | paginate: {id: 'vendors', itemsPerPage: params.limit, currentPage: p, totalItems: totalCustomers }; let i = index">
+                                <td>1</td>
+                                <td></td>
+                                <td>ranalo@gmail.com</td>
+                                <td>Kenya</td>
+                                <td>Nairobi</td>
+                                <td>Kimathi Street, Nairobi, Kenya</td>
+                                <td>Food & Beverages</td>
+                                <td><span class="uk-text-success">Rejected</span></td>
+                                <td>
+                                    <a href=""> <span uk-icon="icon:more"></span></a>
+                                </td>
+                            </tr>
+                            <!-- TODO: Delete below after pulling from database -->
+                            <tr>
+                                <td>1</td>
+                                <td>Jerry Odhiambo</td>
+                                <td>+254705204255</td>
+                                <td>Male</td>
+                                <td>jerryodhiambo5@gmail.com</td>
+                                <td>21st Oct 2020</td>
+                                <td>
+                                    <a href=""> <span uk-icon="icon:more"></span></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Jerry Odhiambo</td>
+                                <td>+254705204255</td>
+                                <td>Female</td>
+                                <td>jerryodhiambo5@gmail.com</td>
+                                <td>21st Oct 2020</td>
+                                <td>
+                                    <a href=""> <span uk-icon="icon:more"></span></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <hr>
+                    <!-- Pagination -->
+                    <div class="uk-text-left">
+                        <pagination-controls id="vendors" previousLabel="Prev" nextLabel="Next"
+                            (pageChange)="getCustomersPagination($event)">
+                        </pagination-controls>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+</div>
